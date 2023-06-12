@@ -18,6 +18,5 @@ public class Animal : MonoBehaviour
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
 
-   
 }
 

@@ -25,7 +25,7 @@ public class BallSpawn : MonoBehaviour
 
         Instantiate(ballPrefabs[ballIndex], GenerateSpawnPosition(), ballPrefabs[ballIndex].transform.rotation);
 
-        float spawnInterval = Random.Range(2.0f, 4.0f);
+        float spawnInterval = Random.Range(1.0f, 4.0f);
 
         Invoke("SpawnBall", spawnInterval);
     }

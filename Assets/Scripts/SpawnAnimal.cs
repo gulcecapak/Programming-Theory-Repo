@@ -20,10 +20,15 @@ public class SpawnAnimal : MonoBehaviour
 
     public void AnimalSpawn()
     {
+        
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            int animalIndex = Random.Range(0, animalPrefabs.Length);
 
-            Instantiate(animalPrefabs[1], transform.position, animalPrefabs[1].transform.rotation);
+            Vector3 spawnPos = new Vector3(-55, 0, 0);
+
+
+            Instantiate(animalPrefabs[animalIndex], spawnPos, animalPrefabs[animalIndex].transform.rotation);
         }
     }
 }
