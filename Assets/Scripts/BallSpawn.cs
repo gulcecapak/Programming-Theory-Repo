@@ -8,7 +8,7 @@ public class BallSpawn : MonoBehaviour
 
     private float spawnLimitXLeft = -25;
     private float spawnLimitXRight= 8;
-    private float spawnPosY = 30;
+    private float spawnPosY = 50;
 
     private float startDelay = 1.0f;
 
@@ -25,7 +25,7 @@ public class BallSpawn : MonoBehaviour
 
         Instantiate(ballPrefabs[ballIndex], GenerateSpawnPosition(), ballPrefabs[ballIndex].transform.rotation);
 
-        float spawnInterval = 4.0f;
+        float spawnInterval = 1.0f;
 
         Invoke("SpawnBall", spawnInterval);
     }

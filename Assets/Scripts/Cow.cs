@@ -5,12 +5,11 @@ using UnityEngine.Scripting.APIUpdating;
 
 public class Cow : Animal //INHERITANCE
 {
-    [SerializeField] private float speed;
 
     public override void Move() //POLYMORPHISM
     {
-        speed = 2.0f;
-        transform.Translate(Vector3.forward * speed * Time.deltaTime);
+       
+        transform.Translate(Vector3.forward * speed * (0.5f) * Time.deltaTime);
 
     }
     private void Update()

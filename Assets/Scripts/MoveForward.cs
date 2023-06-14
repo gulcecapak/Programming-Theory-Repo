@@ -2,20 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Animal : MonoBehaviour
+public class MoveForward : MonoBehaviour
 {
-    public float speed = 5.0f;
-    
-    void Update()
-    {
-        Move(); // ABSTRACTION
-    }
+   [SerializeField] private float speed;
 
-    public virtual void Move()
+    // Update is called once per frame
+    void Update()
     {
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
-
-
 }
-
