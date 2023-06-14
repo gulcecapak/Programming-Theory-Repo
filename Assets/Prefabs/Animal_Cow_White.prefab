@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  cowPrefab: {fileID: 7665353715657541212}
 --- !u!1 &7665353715657541324
 GameObject:
   m_ObjectHideFlags: 0

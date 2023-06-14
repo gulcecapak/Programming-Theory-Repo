@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnAnimal : MonoBehaviour
+public class AnimalSpawner : MonoBehaviour
 {
-    public GameObject[] animalPrefabs;
     public float startDelay = 1.0f;
 
-    private void Start()
+    // Start is called before the first frame update
+    void Start()
     {
         Invoke("AnimalSpawn", startDelay);
     }
@@ -16,19 +16,17 @@ public class SpawnAnimal : MonoBehaviour
     void Update()
     {
         AnimalSpawn();
+
     }
 
     public void AnimalSpawn()
     {
-        
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            int animalIndex = Random.Range(0, animalPrefabs.Length);
-
             Vector3 spawnPos = new Vector3(-55, 0, 0);
+            Instantiate(GameManager.instance.currentAnimalCharacter.animalPrefab, spawnPos, GameManager.instance.currentAnimalCharacter.animalPrefab.transform.rotation);
 
-
-            Instantiate(animalPrefabs[animalIndex], spawnPos, animalPrefabs[animalIndex].transform.rotation);
         }
     }
+
 }
