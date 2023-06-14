@@ -25,7 +25,7 @@ public class BallSpawn : MonoBehaviour
 
         Instantiate(ballPrefabs[ballIndex], GenerateSpawnPosition(), ballPrefabs[ballIndex].transform.rotation);
 
-        float spawnInterval = 1.0f;
+        float spawnInterval = 2.0f;
 
         Invoke("SpawnBall", spawnInterval);
     }
